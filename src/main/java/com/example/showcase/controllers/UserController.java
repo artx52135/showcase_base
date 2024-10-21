@@ -1,6 +1,5 @@
 package com.example.showcase.controllers;
 
-
 import com.example.showcase.entity.User;
 import com.example.showcase.service.UserService;
 import lombok.AllArgsConstructor;
@@ -18,8 +17,8 @@ public class UserController {
 
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
-        User saveduser = userService.createUser(user);
-        return new ResponseEntity<>(saveduser, HttpStatus.CREATED);
+        User savedUser = userService.createUser(user);
+        return new ResponseEntity<>(savedUser, HttpStatus.CREATED);
     }
 
     @GetMapping("{id}")
@@ -43,6 +42,6 @@ public class UserController {
     @DeleteMapping("{id}")
     public ResponseEntity<String> deleteUser(@PathVariable("id") int userId) {
         userService.deleteUser(userId);
-        return ResponseEntity.ok("User is deleted!");
+        return ResponseEntity.ok("User is deleted");
     }
 }
