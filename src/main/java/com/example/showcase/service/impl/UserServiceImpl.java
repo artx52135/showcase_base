@@ -1,6 +1,6 @@
 package com.example.showcase.service.impl;
 
-import com.example.showcase.Exception.ResourceNotFoundException;
+import com.example.showcase.exception.ResourceNotFoundException;
 import com.example.showcase.entity.User;
 import com.example.showcase.repository.UserRepository;
 import com.example.showcase.service.UserService;

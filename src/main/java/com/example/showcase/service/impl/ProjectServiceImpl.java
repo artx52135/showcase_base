@@ -1,16 +1,13 @@
 package com.example.showcase.service.impl;
 
-import com.example.showcase.Exception.ResourceNotFoundException;
+import com.example.showcase.exception.ResourceNotFoundException;
 import com.example.showcase.entity.Project;
 import com.example.showcase.repository.ProjectRepository;
 import com.example.showcase.service.ProjectService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.lang.module.ResolutionException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
