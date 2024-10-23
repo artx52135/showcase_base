@@ -18,7 +18,7 @@ public class Track {
     private int id;
 
     @Column(name = "name", nullable = false, unique = true)
-    private String track;
+    private String name;
 
     @Column(name = "closed")
     private Boolean closed;
