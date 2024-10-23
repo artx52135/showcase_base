@@ -5,13 +5,13 @@ import com.example.showcase.entity.Track;
 import java.util.List;
 
 public interface TrackService {
-    Track createTrack(Track Track);
+    Track createTrack(Track track);
 
-    Track getTrackById(int TrackId);
+    Track getTrackById(int trackId);
 
     List<Track> getAllTracks();
 
-    Track updateTrack(int TrackId, Track updateTrack);
+    Track updateTrack(int trackId, Track updateTrack);
 
-    void deleteTrack(int TrackId);
+    void deleteTrack(int trackId);
 }
