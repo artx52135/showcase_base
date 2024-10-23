@@ -11,15 +11,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "users")
-public class User {
+@Table(name = "users_account")
+public class UserAccount {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "title", nullable = false)
-    private String title;
-
-    @Column(name = "role", nullable = false)
-    private String role;
+    @Column(name = "favorite_projects", nullable = false)
+    private Integer[] favorite_projects;
 }
