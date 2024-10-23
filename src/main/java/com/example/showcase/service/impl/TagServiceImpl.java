@@ -13,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 public class TagServiceImpl implements TagService {
     private TagRepository tagRepository;
+
     @Override
     public Tag createTag(Tag tag) {
         return tagRepository.save(tag);
@@ -40,7 +41,8 @@ public class TagServiceImpl implements TagService {
 
     @Override
     public void deleteTag(int tagId) {
-        Tag tag = tagRepository.findById(tagId).orElseThrow(() -> new ResourceNotFoundException("Tag not found"));
+        Tag tag = tagRepository.findById(tagId)
+            .orElseThrow(() -> new ResourceNotFoundException("Tag not found"));
         tagRepository.delete(tag);
     }
 }

@@ -13,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
+
     @Override
     public User createUser(User user) {
         return userRepository.save(user);
@@ -21,7 +22,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUserById(int userId) {
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new ResourceNotFoundException("User not found"));
+            .orElseThrow(() -> new ResourceNotFoundException("User not found"));
         return user;
     }
 
@@ -33,7 +34,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User updateUser(int userId, User updateUser) {
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new ResourceNotFoundException("User not found"));
+            .orElseThrow(() -> new ResourceNotFoundException("User not found"));
         user.setTitle(updateUser.getTitle());
         user.setRole(updateUser.getRole());
         return userRepository.save(user);
@@ -41,7 +42,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void deleteUser(int userId) {
-        User user = userRepository.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User not found"));
+        User user = userRepository.findById(userId)
+            .orElseThrow(() -> new ResourceNotFoundException("User not found"));
         userRepository.delete(user);
     }
 }

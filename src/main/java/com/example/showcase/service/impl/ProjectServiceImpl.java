@@ -13,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 public class ProjectServiceImpl implements ProjectService {
     private ProjectRepository projectRepository;
+
     @Override
     public Project createProject(Project project) {
         return projectRepository.save(project);
@@ -21,7 +22,7 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public Project getProjectById(int projectId) {
         Project project = projectRepository.findById(projectId)
-                .orElseThrow(() -> new ResourceNotFoundException("Project not found"));
+            .orElseThrow(() -> new ResourceNotFoundException("Project not found"));
         return project;
     }
 
@@ -33,7 +34,7 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public Project updateProject(int projectId, Project updateProject) {
         Project project = projectRepository.findById(projectId)
-                .orElseThrow(() -> new ResourceNotFoundException("Project not found"));
+            .orElseThrow(() -> new ResourceNotFoundException("Project not found"));
         project.setTrack(updateProject.getTrack());
         project.setGoals(updateProject.getGoals());
         project.setResults(updateProject.getResults());
@@ -48,7 +49,8 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public void deleteProject(int projectId) {
-        Project project = projectRepository.findById(projectId).orElseThrow(() -> new ResourceNotFoundException("Project not found"));
+        Project project = projectRepository.findById(projectId)
+            .orElseThrow(() -> new ResourceNotFoundException("Project not found"));
         projectRepository.delete(project);
     }
 
