@@ -35,7 +35,7 @@ public class UserAccountServiceImpl implements UserAccountService {
     public UserAccount updateUserAccount(int userAccountId, UserAccount updateUserAccount) {
         UserAccount userAccount = userAccountRepository.findById(userAccountId)
             .orElseThrow(() -> new ResourceNotFoundException("UserAccount not found"));
-        userAccount.setFavoriteProjects(updateUserAccount.getFavoriteProjects());
+        userAccount.setFavouriteProjects(updateUserAccount.getFavouriteProjects());
         return userAccountRepository.save(userAccount);
     }
 

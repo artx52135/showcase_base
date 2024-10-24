@@ -17,6 +17,6 @@ public class UserAccount {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "favorite_projects", nullable = false)
-    private Integer[] favoriteProjects;
+    @Column(name = "favourite_projects", nullable = false)
+    private Integer[] favouriteProjects;
 }

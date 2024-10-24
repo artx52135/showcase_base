@@ -15,8 +15,8 @@ import lombok.Setter;
 public class ProjectTag {
     @Id
     @Column(name = "project_id", nullable = false)
-    private int project_id;
+    private int projectId;
 
     @Column(name = "tag_id", nullable = false)
-    private int tag_id;
+    private int tagId;
 }

@@ -15,8 +15,8 @@ import lombok.Setter;
 public class ProjectUser {
     @Id
     @Column(name = "project_id", nullable = false)
-    private int project_id;
+    private int projectId;
 
     @Column(name = "user_id", nullable = false)
-    private int user_id;
+    private int userId;
 }
