@@ -18,7 +18,7 @@ public class Project {
     private int id;
 
     @Column(name = "track")
-    private int track;
+    private Integer track;
 
     @Column(name = "goals", nullable = false)
     private String goals;
@@ -27,7 +27,7 @@ public class Project {
     private String results;
 
     @Column(name = "grade")
-    private int grade;
+    private Integer grade;
 
     @Column(name = "repo")
     private String repo;

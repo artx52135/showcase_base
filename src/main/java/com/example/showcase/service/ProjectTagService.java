@@ -7,11 +7,11 @@ import java.util.List;
 public interface ProjectTagService {
     ProjectTag createProjectTag(ProjectTag projectTag);
 
-    ProjectTag getProjectTagByProjectId(int projectId);
-
-    ProjectTag getProjectTagByTagId(int tagId);
+    ProjectTag getProjectTagById(int projectId);
 
     List<ProjectTag> getAllProjectTags();
+
+    ProjectTag updateProjectTag(int projectId, ProjectTag updateProjectTag);
 
     void deleteProjectTag(int projectId);
 }

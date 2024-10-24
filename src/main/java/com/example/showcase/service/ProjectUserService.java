@@ -7,13 +7,11 @@ import java.util.List;
 public interface ProjectUserService {
     ProjectUser createProjectUser(ProjectUser projectUser);
 
-    ProjectUser getProjectUserByUserId(int userId);
-
-    ProjectUser getProjectUserByProjectId(int projectId);
+    ProjectUser getProjectUserById(int userId);
 
     List<ProjectUser> getAllProjectUsers();
 
-    void deleteProjectUserByUserId(int userId);
+    ProjectUser updateProjectUser(int userId, ProjectUser updateProjectUser);
 
-    void deleteProjectUserByProjectId(int projectId);
+    void deleteProjectUser(int userId);
 }

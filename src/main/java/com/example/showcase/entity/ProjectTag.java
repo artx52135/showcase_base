@@ -14,9 +14,12 @@ import lombok.Setter;
 @Table(name = "project_tags")
 public class ProjectTag {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
     @Column(name = "project_id", nullable = false)
-    private int projectId;
+    private Integer projectId;
 
     @Column(name = "tag_id", nullable = false)
-    private int tagId;
+    private Integer tagId;
 }
