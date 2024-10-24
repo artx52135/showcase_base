@@ -11,7 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "project_users")
+@Table(name = "project_users", uniqueConstraints = {@UniqueConstraint(columnNames = {"project_id", "user_id"})})
 public class ProjectUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
