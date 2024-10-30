@@ -1,5 +1,6 @@
 package com.example.showcase.controllers;
 
+import com.example.showcase.dto.ProjectTagDTO;
 import com.example.showcase.entity.ProjectTag;
 import com.example.showcase.service.ProjectTagService;
 import lombok.AllArgsConstructor;
@@ -16,8 +17,8 @@ public class ProjectTagController {
     private ProjectTagService projectTagService;
 
     @PostMapping
-    public ResponseEntity<ProjectTag> createProjectTag(@RequestBody ProjectTag projectTag) {
-        ProjectTag savedProjectTag = projectTagService.createProjectTag(projectTag);
+    public ResponseEntity<ProjectTag> createProjectTag(@RequestBody ProjectTagDTO projectTagDTO) {
+        ProjectTag savedProjectTag = projectTagService.createProjectTag(projectTagDTO);
         return new ResponseEntity<>(savedProjectTag, HttpStatus.CREATED);
     }
 
@@ -34,8 +35,8 @@ public class ProjectTagController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<ProjectTag> updateProjectTag(@PathVariable("id") int projectTagId, @RequestBody ProjectTag updateProjectTag) {
-        ProjectTag projectTag = projectTagService.updateProjectTag(projectTagId, updateProjectTag);
+    public ResponseEntity<ProjectTag> updateProjectTag(@PathVariable("id") int projectTagId, @RequestBody ProjectTagDTO updateProjectTagDTO) {
+        ProjectTag projectTag = projectTagService.updateProjectTag(projectTagId, updateProjectTagDTO);
         return ResponseEntity.ok(projectTag);
     }
 

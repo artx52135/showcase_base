@@ -17,51 +17,51 @@ public class Permission {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "create_track", nullable = false)
+    @Column(name = "create_track")
     private Boolean createTrack;
 
-    @Column(name = "read_track", nullable = false)
+    @Column(name = "read_track")
     private Boolean readTrack;
 
-    @Column(name = "update_track", nullable = false)
+    @Column(name = "update_track")
     private Boolean updateTrack;
 
-    @Column(name = "delete_track", nullable = false)
+    @Column(name = "delete_track")
     private Boolean deleteTrack;
 
-    @Column(name = "create_project", nullable = false)
+    @Column(name = "create_project")
     private Boolean createProject;
 
-    @Column(name = "read_project", nullable = false)
+    @Column(name = "read_project")
     private Boolean readProject;
 
-    @Column(name = "update_project", nullable = false)
+    @Column(name = "update_project")
     private Boolean updateProject;
 
-    @Column(name = "delete_project", nullable = false)
+    @Column(name = "delete_project")
     private Boolean deleteProject;
 
-    @Column(name = "create_user", nullable = false)
+    @Column(name = "create_user")
     private Boolean createUser;
 
-    @Column(name = "read_user", nullable = false)
+    @Column(name = "read_user")
     private Boolean readUser;
 
-    @Column(name = "update_user", nullable = false)
+    @Column(name = "update_user")
     private Boolean updateUser;
 
-    @Column(name = "delete_user", nullable = false)
+    @Column(name = "delete_user")
     private Boolean deleteUser;
 
-    @Column(name = "create_tag", nullable = false)
+    @Column(name = "create_tag")
     private Boolean createTag;
 
-    @Column(name = "read_tag", nullable = false)
+    @Column(name = "read_tag")
     private Boolean readTag;
 
-    @Column(name = "update_tag", nullable = false)
+    @Column(name = "update_tag")
     private Boolean updateTag;
 
-    @Column(name = "delete_tag", nullable = false)
+    @Column(name = "delete_tag")
     private Boolean deleteTag;
 }

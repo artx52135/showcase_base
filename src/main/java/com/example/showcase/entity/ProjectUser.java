@@ -17,9 +17,11 @@ public class ProjectUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "project_id", nullable = false)
-    private Integer projectId;
+    @ManyToOne
+    @JoinColumn(name = "project_id", referencedColumnName = "id", nullable = false)
+    private Project project;
 
-    @Column(name = "user_id", nullable = false)
-    private Integer userId;
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
+    private User user;
 }

@@ -35,8 +35,8 @@ public class ProjectUserServiceImpl implements ProjectUserService {
     public ProjectUser updateProjectUser(int projectTagId, ProjectUser updateProjectUser) {
         ProjectUser projectTag = projectTagRepository.findById(projectTagId)
             .orElseThrow(() -> new ResourceNotFoundException("ProjectUser not found"));
-        projectTag.setProjectId(updateProjectUser.getProjectId());
-        projectTag.setUserId(updateProjectUser.getUserId());
+        projectTag.setProject(updateProjectUser.getProject());
+        projectTag.setUser(updateProjectUser.getUser());
         return projectTagRepository.save(projectTag);
     }
 

@@ -17,9 +17,11 @@ public class ProjectTag {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "project_id", nullable = false)
-    private Integer projectId;
+    @ManyToOne
+    @JoinColumn(name = "tag_id", referencedColumnName = "id")
+    private Tag tag;
 
-    @Column(name = "tag_id", nullable = false)
-    private Integer tagId;
+    @ManyToOne
+    @JoinColumn(name = "project_id", referencedColumnName = "id")
+    private Project project;
 }
