@@ -20,11 +20,8 @@ import java.util.Optional;
 @AllArgsConstructor
 public class ProjectTagServiceImpl implements ProjectTagService {
 
-    @Autowired
     private ProjectTagRepository projectTagRepository;
-    @Autowired
     private TagRepository tagRepository;
-    @Autowired
     private ProjectRepository projectRepository;
     
     @Override

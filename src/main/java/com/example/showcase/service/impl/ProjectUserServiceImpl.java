@@ -17,11 +17,8 @@ import java.util.Optional;
 @AllArgsConstructor
 public class ProjectUserServiceImpl implements ProjectUserService {
 
-    @Autowired
     private ProjectRepository projectRepository;
-    @Autowired
     private UserRepository userRepository;
-    @Autowired
     private ProjectUserRepository projectUserRepository;
 
     @Override
