@@ -1,5 +1,6 @@
 package com.example.showcase.controllers;
 
+import com.example.showcase.dto.ProjectUserDTO;
 import com.example.showcase.entity.ProjectUser;
 import com.example.showcase.service.ProjectUserService;
 import lombok.AllArgsConstructor;
@@ -16,8 +17,8 @@ public class ProjectUserController {
     private ProjectUserService projectUserService;
 
     @PostMapping
-    public ResponseEntity<ProjectUser> createProjectUser(@RequestBody ProjectUser projectUser) {
-        ProjectUser savedProjectUser = projectUserService.createProjectUser(projectUser);
+    public ResponseEntity<ProjectUser> createProjectUser(@RequestBody ProjectUserDTO projectUserDTO) {
+        ProjectUser savedProjectUser = projectUserService.createProjectUser(projectUserDTO);
         return new ResponseEntity<>(savedProjectUser, HttpStatus.CREATED);
     }
 
@@ -34,8 +35,8 @@ public class ProjectUserController {
     }
 
     @PutMapping("{id}")
-    public ResponseEntity<ProjectUser> updateProjectUser(@PathVariable("id") int projectUserId, @RequestBody ProjectUser updateProjectUser) {
-        ProjectUser projectUser = projectUserService.updateProjectUser(projectUserId, updateProjectUser);
+    public ResponseEntity<ProjectUser> updateProjectUser(@PathVariable("id") int projectUserId, @RequestBody ProjectUserDTO updateProjectUserDTO) {
+        ProjectUser projectUser = projectUserService.updateProjectUser(projectUserId, updateProjectUserDTO);
         return ResponseEntity.ok(projectUser);
     }
 
