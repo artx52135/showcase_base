@@ -6,6 +6,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ProjectUserDTO {
-    private int projectId;
-    private int userId;
+    private Integer projectId;
+    private Integer userId;
 }
