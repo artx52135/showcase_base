@@ -25,10 +25,12 @@
 		<tag/>
 		<url/>
 	</scm>
+	<packaging>jar</packaging>
 	<properties>
 		<java.version>23</java.version>
 		<maven.compiler.source>23</maven.compiler.source>
         <maven.compiler.target>23</maven.compiler.target>
+		<start-class>com.example.showcase.ShowcaseApplication</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -87,6 +89,10 @@
                     </annotationProcessors>
                 </configuration>
             </plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			 </plugin>
         </plugins>
 	</build>
 
