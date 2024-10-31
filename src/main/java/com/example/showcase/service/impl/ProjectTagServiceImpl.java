@@ -10,7 +10,6 @@ import com.example.showcase.repository.ProjectTagRepository;
 import com.example.showcase.repository.TagRepository;
 import com.example.showcase.service.ProjectTagService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,13 +1,11 @@
 package com.example.showcase.service.impl;
 
-import com.example.showcase.dto.ProjectTagDTO;
 import com.example.showcase.dto.ProjectUserDTO;
 import com.example.showcase.entity.*;
 import com.example.showcase.exception.ResourceNotFoundException;
 import com.example.showcase.repository.*;
 import com.example.showcase.service.ProjectUserService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
