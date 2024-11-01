@@ -42,7 +42,7 @@ public class ProjectServiceImpl implements ProjectService {
         project.setRepo(updateProject.getRepo());
         project.setTitle(updateProject.getTitle());
         project.setScreenshots(updateProject.getScreenshots());
-        project.setThubnail(updateProject.getThubnail());
+        project.setThumbnail(updateProject.getThumbnail());
         project.setPptxUrl(updateProject.getPptxUrl());
         return projectRepository.save(project);
     }
@@ -52,6 +52,11 @@ public class ProjectServiceImpl implements ProjectService {
         Project project = projectRepository.findById(projectId)
             .orElseThrow(() -> new ResourceNotFoundException("Project not found"));
         projectRepository.delete(project);
+    }
+
+    @Override
+    public Iterable<Project> save(List<Project> projects) {
+        return projectRepository.saveAll(projects);
     }
 
 }

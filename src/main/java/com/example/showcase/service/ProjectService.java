@@ -14,4 +14,6 @@ public interface ProjectService {
     Project updateProject(int projectId, Project updateProject);
 
     void deleteProject(int projectId);
+
+    Iterable<Project> save(List<Project> projects);
 }

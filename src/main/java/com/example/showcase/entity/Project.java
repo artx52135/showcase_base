@@ -22,7 +22,7 @@ public class Project {
     @Column(name = "track")
     private Integer track;
 
-    @Column(name = "goals", nullable = false)
+    @Column(name = "goals")
     private String goals;
 
     @Column(name = "results")
@@ -40,8 +40,8 @@ public class Project {
     @Column(name = "screenshots")
     private String[] screenshots;
 
-    @Column(name = "thubnail")
-    private String thubnail;
+    @Column(name = "thumbnail")
+    private String thumbnail;//thumbnail
 
     @Column(name = "pptxUrl")
     private String pptxUrl;

@@ -1,7 +1,9 @@
 package com.example.showcase.service;
 
 import com.example.showcase.entity.Tag;
+import com.example.showcase.entity.Track;
 
+import java.util.Iterator;
 import java.util.List;
 
 public interface TagService {
@@ -14,4 +16,6 @@ public interface TagService {
     Tag updateTag(int tagId, Tag updateTag);
 
     void deleteTag(int tagId);
+
+    Iterable<Tag> save(List<Tag> tags);
 }

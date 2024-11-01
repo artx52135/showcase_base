@@ -46,4 +46,9 @@ public class UserServiceImpl implements UserService {
             .orElseThrow(() -> new ResourceNotFoundException("User not found"));
         userRepository.delete(user);
     }
+
+    @Override
+    public Iterable<User> save(List<User> users) {
+        return userRepository.saveAll(users);
+    }
 }
