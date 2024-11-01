@@ -45,4 +45,9 @@ public class TrackServiceImpl implements TrackService {
             .orElseThrow(() -> new ResourceNotFoundException("Track not found"));
         trackRepository.delete(track);
     }
+
+    @Override
+    public Iterable<Track> save(List<Track> tracks) {
+        return trackRepository.saveAll(tracks);
+    }
 }

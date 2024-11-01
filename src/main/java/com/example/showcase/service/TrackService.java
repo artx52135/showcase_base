@@ -14,4 +14,6 @@ public interface TrackService {
     Track updateTrack(int trackId, Track updateTrack);
 
     void deleteTrack(int trackId);
+
+    Iterable<Track> save(List<Track> tracks);
 }
