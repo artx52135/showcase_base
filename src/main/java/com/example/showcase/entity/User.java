@@ -20,9 +20,6 @@ public class User {
     @Column(name = "full_name", nullable = false)
     private String fullName;
 
-    @Column(name = "title", nullable = false)
-    private String title;
-
     @Column(name = "role", nullable = false)
     private String role;
 }

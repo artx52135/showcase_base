@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -36,11 +38,11 @@ public class Project {
     private String title;
 
     @Column(name = "screenshots")
-    private String screenshots;
+    private String[] screenshots;
 
     @Column(name = "thubnail")
     private String thubnail;
 
-    @Column(name = "pptxurl")
-    private String pptxurl;
+    @Column(name = "pptxUrl")
+    private String pptxUrl;
 }

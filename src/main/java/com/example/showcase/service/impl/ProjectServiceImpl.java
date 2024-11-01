@@ -43,7 +43,7 @@ public class ProjectServiceImpl implements ProjectService {
         project.setTitle(updateProject.getTitle());
         project.setScreenshots(updateProject.getScreenshots());
         project.setThubnail(updateProject.getThubnail());
-        project.setPptxurl(updateProject.getPptxurl());
+        project.setPptxUrl(updateProject.getPptxUrl());
         return projectRepository.save(project);
     }
 
